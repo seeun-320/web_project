@@ -255,8 +255,10 @@ function courseprint() {
     }
   }
   if (d3.checked) { //2박3일
-    if (cnt_p * cnt_c < 5)
+    if (cnt_p * cnt_c < 2)
       num = 3;
+    else if (cnt_p * cnt_c <4)
+      num = 2;
     else
       num = 1;
     for (var i = 0; i < num; i++) {
@@ -320,8 +322,13 @@ function courseprint() {
   }
 
   if (d4.checked) { //3박4일
-    if (cnt_p * cnt_c < 6) num = 2;
-    else num = 1;
+     if (cnt_p * cnt_c < 2)
+      num = 4;
+     else if (cnt_p * cnt_c <4)
+      num = 3;
+     else if (cnt_p *cnt_C<6)
+       num = 2;
+     else num = 1;
     for (var i = 0; i < num; i++) {
       if (n.checked) {//제주 북부
         if (cafe.checked) { //카페
