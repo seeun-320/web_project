@@ -90,6 +90,7 @@ function tagprint() {
     hashtag = "";
     cnt_c = 0;
     cnt_p = 0;
+    num =1;
     courseprint();
     // document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850967.544072283!2d126.01257917393848!3d33.576961295130374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350ce3544cc84045%3A0x66bc36d2981ebf31!2z7KCc7KO87Yq567OE7J6Q7LmY64-E!5e0!3m2!1sko!2skr!4v1619775924988!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
   }
@@ -116,7 +117,7 @@ var south_act = ["그랑블루 요트/ ", "중문 서핑/ ", "돌고래 요트�
 
 function courseprint() {
   var randnum;
-  var num;
+  var num=1;
   if (d1.checked) { //당일치기
     if (n.checked) {//제주 북부
       if (cafe.checked) { //카페
@@ -255,12 +256,15 @@ function courseprint() {
     }
   }
   if (d3.checked) { //2박3일
-    if (cnt_p * cnt_c < 2)
+    if (cnt_p * cnt_c < 2){
       num = 3;
-    else if (cnt_p * cnt_c <4)
+    }
+    else if (cnt_p * cnt_c <4){
       num = 2;
-    else
+    }
+    else {
       num = 1;
+    }
     for (var i = 0; i < num; i++) {
       if (n.checked) {//제주 북부
         if (cafe.checked) { //카페
@@ -322,13 +326,18 @@ function courseprint() {
   }
 
   if (d4.checked) { //3박4일
-     if (cnt_p * cnt_c < 2)
+     if (cnt_p * cnt_c < 2) {
       num = 4;
-     else if (cnt_p * cnt_c <4)
+     }
+     else if (cnt_p * cnt_c <4) {
       num = 3;
-     else if (cnt_p *cnt_C<6)
+     }
+     else if (cnt_p *cnt_C<6){
        num = 2;
-     else num = 1;
+     }
+     else {
+       num = 1;
+     }
     for (var i = 0; i < num; i++) {
       if (n.checked) {//제주 북부
         if (cafe.checked) { //카페
